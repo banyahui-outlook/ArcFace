@@ -1,0 +1,14 @@
+<service>
+  <id>aj_face</id>
+  <name>aj_face</name>
+  <description>aj face service</description>
+  <executable>{1}\depends\envirment\bin\javaw.exe</executable>
+  <arguments>-jar {1}\ArcFace-1.0.jar</arguments>
+  <startargument>-Dfile.encoding=UTF-8</startargument>
+  <onfailure action="restart" delay="30 sec"/>
+  <priority>Normal</priority>
+  <startmode>Automatic</startmode>
+  <depend>W32Time</depend>
+  <logpath>{1}\_logs/</logpath>
+  <log mode="none"></log>
+</service>
