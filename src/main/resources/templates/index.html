@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <style rel="stylesheet" type="text/css">
+        html, body {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            display: table;
+        }
+
+        .main {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+            bottom: 36px;
+        }
+
+        .info {
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="tip">
+        <h1>人脸比对服务已开启！</h1>
+    </div>
+    <div class="time">
+        <h3>有效期至：<span th:text="${expire}"></span></h3>
+    </div>
+    <div class="info">
+        <h3>人脸比对公共服务接口：http://localhost:8899/api/face/compare</h3>
+        <h3>科一人脸比对服务接口：http://localhost:8899/km1/face/compare</h3>
+    </div>
+</div>
+</body>
+</html>
